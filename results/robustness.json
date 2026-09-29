@@ -1,0 +1,53 @@
+{
+  "early_exact_duplicates_removed": 250306,
+  "deduplicated_associations": {
+    "O1": {
+      "or": 0.7769033741983782,
+      "lo": 0.7418965399494497,
+      "hi": 0.813562026966659,
+      "p": 7.269393134898071e-27
+    },
+    "O2": {
+      "or": 0.9101878261523337,
+      "lo": 0.8820518537458989,
+      "hi": 0.9392212888138979,
+      "p": 4.256780787016584e-09
+    }
+  },
+  "fail_only_associations": {
+    "O1": {
+      "or": 0.7318881499577213,
+      "lo": 0.6909796359894541,
+      "hi": 0.7752185971175443,
+      "p": 2.0248103343329893e-26
+    },
+    "O2": {
+      "or": 0.9296893596280249,
+      "lo": 0.8971498097802709,
+      "hi": 0.9634091162737425,
+      "p": 6.0546799969664756e-05
+    }
+  },
+  "fail_only_n": 8285,
+  "temporal_ablation_test_auroc": {
+    "Volume + submissions": 0.7523738141089205,
+    "+ active days": 0.7661995620380475,
+    "+ momentum": 0.7535623241460302,
+    "+ both": 0.7677538230458874
+  },
+  "moodle_fractional_logit": {
+    "M1": {
+      "or": 1.483639810212459,
+      "lo": 1.271021578248,
+      "hi": 1.731825111483488,
+      "p": 5.76860399767384e-07
+    },
+    "M2": {
+      "or": 0.8221991589849257,
+      "lo": 0.5829731296939963,
+      "hi": 1.1595928227264247,
+      "p": 0.26444688107127357
+    }
+  },
+  "moodle_ols_support": "Bounded fractional-logit model used only as directional sensitivity; no independent-day assumption or causal interpretation."
+}

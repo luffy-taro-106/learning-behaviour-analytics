@@ -1,0 +1,408 @@
+{
+  "seed": 610,
+  "analysis_date": "2026-09-29",
+  "oulad": {
+    "audit": {
+      "enrolments_raw": 32593,
+      "unique_students_raw": 28785,
+      "table_rows": {
+        "studentAssessment": 173912,
+        "studentInfo": 32593,
+        "courses": 22,
+        "vle": 6364,
+        "studentRegistration": 32593,
+        "assessments": 206
+      },
+      "registration_missing": 45,
+      "registration_after_day0": 234,
+      "removed_registration": 279,
+      "removed_withdrawn_before_landmark": 6010,
+      "vle_rows_raw": 10655280,
+      "vle_exact_duplicates": 787170,
+      "vle_negative_date_rows": 688988,
+      "vle_nonpositive": 0,
+      "banked_opportunities_removed": 893,
+      "landmark_n": 26304,
+      "zero_early_clicks": 760,
+      "landmark_outcomes": {
+        "Pass": 12258,
+        "Fail": 6972,
+        "Withdrawn": 4066,
+        "Distinction": 3008
+      },
+      "test_removed_seen_people": 1442,
+      "test_removed_unseen_context": 3811
+    },
+    "splits": {
+      "train": {
+        "n": 9101,
+        "students": 9012,
+        "risk_rate": 0.4270959235248874
+      },
+      "validation": {
+        "n": 2267,
+        "students": 2253,
+        "risk_rate": 0.4146449051610057
+      },
+      "test": {
+        "n": 9683,
+        "students": 9579,
+        "risk_rate": 0.38252607662914384
+      }
+    },
+    "models": {
+      "Volume/context LR": {
+        "auroc": 0.7225235904860677,
+        "ap": 0.652405284242121,
+        "brier": 0.20041124495394236,
+        "balanced_accuracy": 0.6391532305112531,
+        "precision": 0.48873685966961455,
+        "recall": 0.7907667386609071,
+        "f1": 0.6041043621738682,
+        "threshold": 0.33499999999999996,
+        "confusion": [
+          [
+            2915,
+            3064
+          ],
+          [
+            775,
+            2929
+          ]
+        ],
+        "auroc_ci": [
+          0.7120092086777899,
+          0.7335928211985602
+        ]
+      },
+      "Behaviour LR": {
+        "auroc": 0.7677538230458874,
+        "ap": 0.7207946856848929,
+        "brier": 0.18077021648834374,
+        "balanced_accuracy": 0.6992936174739739,
+        "precision": 0.6160348360655737,
+        "recall": 0.6492980561555075,
+        "f1": 0.632229232386961,
+        "threshold": 0.36999999999999994,
+        "confusion": [
+          [
+            4480,
+            1499
+          ],
+          [
+            1299,
+            2405
+          ]
+        ],
+        "auroc_ci": [
+          0.756850306570187,
+          0.7773306584425876
+        ]
+      },
+      "Random forest": {
+        "auroc": 0.7749002132012078,
+        "ap": 0.7290869681233823,
+        "brier": 0.1788054749712557,
+        "balanced_accuracy": 0.6959274893733539,
+        "precision": 0.574395204453008,
+        "recall": 0.7243520518358532,
+        "f1": 0.6407164179104478,
+        "threshold": 0.36999999999999994,
+        "confusion": [
+          [
+            3991,
+            1988
+          ],
+          [
+            1021,
+            2683
+          ]
+        ],
+        "auroc_ci": [
+          0.7648389633412315,
+          0.784137179334764
+        ]
+      },
+      "Prevalence dummy": {
+        "auroc": 0.5,
+        "ap": 0.38252607662914384,
+        "brier": 0.23818634858016818,
+        "balanced_accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.5,
+        "confusion": [
+          [
+            5979,
+            0
+          ],
+          [
+            3704,
+            0
+          ]
+        ]
+      }
+    },
+    "validation": {
+      "Volume/context LR": {
+        "auroc": 0.7359028523785855,
+        "ap": 0.6980045777708079,
+        "f1": 0.6361301369863014,
+        "threshold": 0.33499999999999996
+      },
+      "Behaviour LR": {
+        "auroc": 0.7832268434639004,
+        "ap": 0.7566371430305585,
+        "f1": 0.6721951219512196,
+        "threshold": 0.36999999999999994
+      },
+      "Random forest": {
+        "auroc": 0.7857609549615994,
+        "ap": 0.7615801093889967,
+        "f1": 0.6752136752136753,
+        "threshold": 0.36999999999999994
+      }
+    },
+    "selected_by_validation_ap": "Random forest",
+    "auc_delta": {
+      "effect": 0.045230232559819616,
+      "ci": [
+        0.0373259786889297,
+        0.05333829050435286
+      ]
+    },
+    "hypotheses": {
+      "O1": {
+        "coef": -0.24995732063210052,
+        "effect": 0.77883402250586,
+        "lo": 0.7437277740806133,
+        "hi": 0.8155973943053394,
+        "p": 2.3600596878950113e-26,
+        "p_holm": 9.440238751580045e-26
+      },
+      "O2": {
+        "coef": -0.09306548096304512,
+        "effect": 0.911133836421666,
+        "lo": 0.8831819557649281,
+        "hi": 0.9399703678880684,
+        "p": 4.796273697082251e-09,
+        "p_holm": 1.4388821091246753e-08
+      }
+    },
+    "inference_formula": "risk ~ log_clicks + active7 + momentum + num_of_prev_attempts + credits60 + ontime_share + no_due + C(context)",
+    "contexts": [
+      "AAA_J",
+      "BBB_B",
+      "BBB_J",
+      "DDD_B",
+      "DDD_J",
+      "EEE_J",
+      "FFF_B",
+      "FFF_J",
+      "GGG_J"
+    ]
+  },
+  "moodle": {
+    "audit": {
+      "raw_events": 146048,
+      "raw_users": 174,
+      "duplicates": 0,
+      "bad_timestamps": 0,
+      "missing_content_code": 35493,
+      "telemetry_removed": 40826,
+      "filtered_all_events": 105222,
+      "filtered_cohort_events": 92429,
+      "early_events": 26376,
+      "followup_events": 18929,
+      "cohort_n": 141,
+      "late_arrival_excluded": 33,
+      "anchor": "2025-10-23",
+      "last_date": "2026-07-29 00:42:04",
+      "cutoff": "2025-12-18",
+      "followup_end": "2026-01-14",
+      "future_zero_users": 16,
+      "forum_posts": 1
+    },
+    "hypotheses": {
+      "M1": {
+        "coef": 1.8219017758124565,
+        "effect": 1.8219017758124565,
+        "lo": 1.0573201149630802,
+        "hi": 2.586483436661833,
+        "p": 3.006909920005473e-06,
+        "bootstrap_ci": [
+          1.0877786150558928,
+          2.5882258222193526
+        ],
+        "p_holm": 6.013819840010946e-06
+      },
+      "M2": {
+        "coef": -0.9368923632027493,
+        "effect": -0.9368923632027493,
+        "lo": -2.236158616399827,
+        "hi": 0.3623738899943285,
+        "p": 0.15756249106539322,
+        "bootstrap_ci": [
+          -2.166271730120162,
+          0.364342276033173
+        ],
+        "p_holm": 0.15756249106539322
+      }
+    },
+    "ols_r2": 0.30702392052901506,
+    "k_selection": [
+      {
+        "k": 2,
+        "silhouette": 0.36103364854927666,
+        "inertia": 349.6454738195978
+      },
+      {
+        "k": 3,
+        "silhouette": 0.4205687764555023,
+        "inertia": 218.08491851667222
+      },
+      {
+        "k": 4,
+        "silhouette": 0.4086039354269838,
+        "inertia": 140.51204136287782
+      },
+      {
+        "k": 5,
+        "silhouette": 0.4048835477311292,
+        "inertia": 107.48180948698271
+      }
+    ],
+    "selected_k": 3,
+    "stability_median": 0.9194926188590598,
+    "stability_interval": [
+      0.4166155866900175,
+      1.0
+    ],
+    "profiles": [
+      {
+        "cluster": 0,
+        "n": 57,
+        "events": 32.0,
+        "active_days": 4.0,
+        "entropy": 0.45056120886630463,
+        "quiz_share": 0.0,
+        "future_days": 2.0,
+        "future_weeks": 2.0,
+        "minutes30": 19.533333333333335
+      },
+      {
+        "cluster": 1,
+        "n": 78,
+        "events": 222.5,
+        "active_days": 13.0,
+        "entropy": 1.2509096010292167,
+        "quiz_share": 0.0,
+        "future_days": 5.0,
+        "future_weeks": 3.0,
+        "minutes30": 167.74166666666667
+      },
+      {
+        "cluster": 2,
+        "n": 6,
+        "events": 264.5,
+        "active_days": 8.5,
+        "entropy": 0.7466449026363108,
+        "quiz_share": 0.43155459838876925,
+        "future_days": 4.0,
+        "future_weeks": 2.0,
+        "minutes30": 126.67500000000001
+      }
+    ],
+    "followup_kruskal": {
+      "H": 17.46752369104079,
+      "p": 0.0001610554494873631,
+      "epsilon_squared": 0.11208350500754195
+    },
+    "sessions": [
+      {
+        "gap_minutes": 15,
+        "sessions": 2396,
+        "singleton_fraction": 0.1773789649415693,
+        "median_session_minutes": 1.2333333333333334,
+        "mean_session_minutes": 6.437973010573177,
+        "total_observed_hours": 257.08972222222224
+      },
+      {
+        "gap_minutes": 30,
+        "sessions": 2142,
+        "singleton_fraction": 0.16106442577030813,
+        "median_session_minutes": 1.6333333333333333,
+        "mean_session_minutes": 9.723148148148146,
+        "total_observed_hours": 347.1163888888888
+      },
+      {
+        "gap_minutes": 60,
+        "sessions": 1938,
+        "singleton_fraction": 0.15015479876160992,
+        "median_session_minutes": 2.091666666666667,
+        "mean_session_minutes": 15.163949088407294,
+        "total_observed_hours": 489.7955555555556
+      }
+    ],
+    "telemetry_sensitivity": {
+      "M1": {
+        "coef": 1.8305314220938835,
+        "effect": 1.8305314220938835,
+        "lo": 1.0661375757883156,
+        "hi": 2.5949252683994515,
+        "p": 2.684099901352655e-06
+      },
+      "M2": {
+        "coef": -0.9140921235074182,
+        "effect": -0.9140921235074182,
+        "lo": -2.1604983062423075,
+        "hi": 0.33231405922747137,
+        "p": 0.15060359561949646
+      }
+    },
+    "feature_correlations": {
+      "log_events": {
+        "log_events": 1.0,
+        "active_days": 0.696,
+        "entropy": 0.707,
+        "quiz_share": 0.181,
+        "future_days": 0.37
+      },
+      "active_days": {
+        "log_events": 0.696,
+        "active_days": 1.0,
+        "entropy": 0.531,
+        "quiz_share": -0.017,
+        "future_days": 0.544
+      },
+      "entropy": {
+        "log_events": 0.707,
+        "active_days": 0.531,
+        "entropy": 1.0,
+        "quiz_share": 0.011,
+        "future_days": 0.211
+      },
+      "quiz_share": {
+        "log_events": 0.181,
+        "active_days": -0.017,
+        "entropy": 0.011,
+        "quiz_share": 1.0,
+        "future_days": -0.014
+      },
+      "future_days": {
+        "log_events": 0.37,
+        "active_days": 0.544,
+        "entropy": 0.211,
+        "quiz_share": -0.014,
+        "future_days": 1.0
+      }
+    }
+  },
+  "hypothesis_decisions": {
+    "O1": true,
+    "O2": true,
+    "M1": true,
+    "M2": false
+  }
+}

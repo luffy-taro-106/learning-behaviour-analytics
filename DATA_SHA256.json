@@ -1,0 +1,10 @@
+{
+  "data/raw/oulad/assessments.csv": "8cc738fb88ad760571d6f2a23059bfee0ffcae3bcd830514c9cbd5c6d5a046f1",
+  "data/raw/oulad/courses.csv": "4f16eee7454b15e109b0a21a0e43be820e6846ed6f9301bb7feb5ab5ad737a75",
+  "data/raw/oulad/studentAssessment.csv": "fd5320786328d05af841ee7dd4b5871b9dada3b9fe9d6a3642b2f42635510a6e",
+  "data/raw/oulad/studentInfo.csv": "7e6f3e474a5eee00639d2a414a6c7e928745823c2d2c2563ca1780145f99b0d6",
+  "data/raw/oulad/studentRegistration.csv": "0d32676285372aaf2e7a80304e5b274b4fba24313e2ca4c04317225e1ec90170",
+  "data/raw/oulad/studentVle.csv": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0",
+  "data/raw/oulad/vle.csv": "d1b28303dea802ad87b4484e1196e878e06824850b9a4fe8aa34693439fe87e9",
+  "data/raw/moodle/moodle.csv": "5df9a5590df7200bdd569ec13af4ee3d4ddc5f950a190fd1a589346dc99593d0"
+}
