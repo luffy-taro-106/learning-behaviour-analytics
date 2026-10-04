@@ -60,6 +60,10 @@ check(len(pdf.pages)==10,'PDF exactly ten pages')
 texts=[p.extract_text() for p in pdf.pages];text='\n'.join(texts)
 for name in ['Darshan Sonawane','23b1541','Aditya Singh','23b1524','Ashok Kumar','23b0628']:
  check(name in texts[0],f'Title page includes {name}')
+check('Individual contributions' in texts[1], 'Separate contributions page is page 2')
+for value in ['Project title', 'Darshan Sonawane', '23b1541', 'Aditya Singh', '23b1524', 'Ashok Kumar', '23b0628', 'Part 1', 'Part 2', 'Part 3']:
+ check(value in texts[1], f'Contributions page includes {value}')
+check(texts[1].count('1/3 (equal share)')==3, 'All three members have equal one-third shares')
 check(all(len(t)>500 for t in texts),'No empty/near-empty PDF page')
 check(not re.search(r'\b(TODO|TBD|PLACEHOLDER|NaN)\b',text),'No placeholders in PDF')
 check('github.com/luffy-taro-106/learning-behaviour-analytics' in text,'Repository link in PDF')

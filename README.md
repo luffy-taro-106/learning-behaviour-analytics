@@ -10,6 +10,18 @@ ET 610 group assignment, 29 September 2026.
 
 **[Download the 10-page PDF report](output/pdf/Learning_Behaviour_Analytics_Report.pdf).**
 
+## Equal team contributions
+
+The report includes a separate contributions page (page 2). Work is allocated in three equal one-third shares:
+
+| Member | Roll number | Contribution area |
+|---|---|---|
+| Darshan Sonawane | 23b1541 | Research design, data preparation and feature engineering for both datasets |
+| Aditya Singh | 23b1524 | Machine learning, statistical evaluation and robustness analysis |
+| Ashok Kumar | 23b0628 | Visual analytics, interpretation, report preparation and reproducibility documentation |
+
+The title, introduction and hypotheses share page 1 so the complete report remains within ten pages.
+
 ## Main results
 
 - OULAD: a 2013-trained random forest achieved **0.775 AUROC** (person-bootstrap 95% CI 0.765-0.784) on 9,683 eligible 2014 enrolments with no person overlap with 2013.

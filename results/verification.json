@@ -1,5 +1,5 @@
 {
-  "passed": 71,
+  "passed": 83,
   "checks": [
     "OULAD cohort accounting",
     "OULAD outcome accounting",
@@ -63,6 +63,18 @@
     "Title page includes 23b1524",
     "Title page includes Ashok Kumar",
     "Title page includes 23b0628",
+    "Separate contributions page is page 2",
+    "Contributions page includes Project title",
+    "Contributions page includes Darshan Sonawane",
+    "Contributions page includes 23b1541",
+    "Contributions page includes Aditya Singh",
+    "Contributions page includes 23b1524",
+    "Contributions page includes Ashok Kumar",
+    "Contributions page includes 23b0628",
+    "Contributions page includes Part 1",
+    "Contributions page includes Part 2",
+    "Contributions page includes Part 3",
+    "All three members have equal one-third shares",
     "No empty/near-empty PDF page",
     "No placeholders in PDF",
     "Repository link in PDF",
@@ -74,5 +86,5 @@
     "Figure exists: hypothesis_effects"
   ],
   "pdf_pages": 10,
-  "pdf_bytes": 755857
+  "pdf_bytes": 755942
 }
